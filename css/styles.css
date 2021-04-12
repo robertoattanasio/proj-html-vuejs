@@ -56,7 +56,7 @@ a:active {
     --main-trans: 200ms ease-in-out;
 }
 
-button.violet {
+button.white {
     font-family: 'Open Sans', serif;
     color: var(--daisyBush);
     font-size: 12px;
@@ -70,9 +70,30 @@ button.violet {
     outline: none;
 }
 
-button.violet:hover {
+button.white:hover {
     background-color: var(--daisyBush);
     color: var(--white);
+    cursor: pointer;
+}
+
+button.violet {
+    width: 30%;
+    padding: 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--daisyBush);
+    border: none;
+    border-radius: 6px;
+    transition: var(--main-trans);
+    outline: none;
+}
+
+button.violet:hover {
+    color: var(--daisyBush);
+    background-color: white;
+    border: 1px solid lightgray;
     cursor: pointer;
 }
 
@@ -93,6 +114,9 @@ h2 {
 
 h3 {
     font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--daisyBush);
 }
 
 h4 {
@@ -157,7 +181,7 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 130px;
-    padding: 0 30px 0 20px;
+    padding: 0 30px;
     color: var(--daisyBush);
     background-color: transparent;
     transition: var(--main-trans);
@@ -216,7 +240,7 @@ nav {
 }
 
 .menu .fa-shopping-cart {
-    font-size: 16p;
+    font-size: 16px;
 }
 
 .menu .fa-shopping-cart:hover {
@@ -229,7 +253,7 @@ nav {
 .fixed_buttons_demo {
     position: fixed;
     top: 200px;
-    right: 16px;
+    right: 12px;
     width: 70px;
     height: 70px;
     font-size: 26px;
@@ -244,7 +268,7 @@ nav {
 .fixed_buttons_price {
     position: fixed;
     top: 280px;
-    right: 16px;
+    right: 12px;
     width: 70px;
     height: 70px;
     font-size: 26px;
@@ -276,7 +300,7 @@ p.fixed_buttons_title {
     align-items: center;
     position: fixed;
     bottom: 16px;
-    right: 16px;
+    right: 12px;
     width: 46px;
     height: 46px;
     text-align: center;
@@ -293,4 +317,131 @@ p.fixed_buttons_title {
 section {
     width: 100%;
     height: 1000px;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    background-color: white;
+}
+
+
+/* FOOTER TOP */
+
+.top_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 70px 100px;
+}
+
+
+/* FOOTER LEFT */
+
+.footer_left {
+    width: 70%;
+}
+
+.footer_logo {
+    margin-bottom: 40px;
+}
+
+.footer_logo img {
+    width: 140px;
+}
+
+.footer_menu {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.footer_menu li {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--daisyBush);
+    text-transform: capitalize;
+}
+
+.footer_menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.footer_menu li:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--daisyBush);
+    opacity: 0;
+    transition: var(--main-trans);
+}
+
+.footer_menu li:hover:after {
+    opacity: 1;
+}
+
+.footer_menu .fa-shopping-cart {
+    font-size: 14px;
+    color: var(--daisyBush);
+}
+
+.footer_menu .fa-shopping-cart:hover {
+    cursor: pointer;
+}
+
+
+/* FOOTER RIGHT */
+
+.footer_right {
+    width: 30%;
+    text-align: right;
+}
+
+.email {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.email input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--outerSpace);
+    width: 69%;
+    padding: 10px 15px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+}
+
+
+/* FOOTER BOTTOM */
+
+.bottom_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 70px 100px;
+}
+
+.copyright {
+    font-size: 10px;
+    color: var(--outerSpace);
+}
+
+.social {
+    color: var(--daisyBush)
+}
+
+.social i {
+    margin-left: 20px;
 }

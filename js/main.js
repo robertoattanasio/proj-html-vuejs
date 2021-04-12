@@ -37,6 +37,35 @@ const app = new Vue({
                 title: 'my account',
                 link: '#',
             },
+        ],
+        footerMenuObjects: [{
+                title: 'shop',
+                link: '#',
+            },
+            {
+                title: 'about',
+                link: '#',
+            },
+            {
+                title: 'gallery',
+                link: '#',
+            },
+            {
+                title: 'locations',
+                link: '#',
+            },
+            {
+                title: 'journal',
+                link: '#',
+            },
+            {
+                title: 'contact',
+                link: '#',
+            },
+            {
+                title: 'orders',
+                link: '#',
+            },
         ]
     },
 
