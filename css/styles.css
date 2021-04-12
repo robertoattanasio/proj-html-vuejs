@@ -65,8 +65,9 @@ button.violet {
     border: none;
     border-radius: 3px;
     margin: 16px 0;
-    padding: 7px 20px;
+    padding: 7px 35px;
     transition: var(--main-trans);
+    outline: none;
 }
 
 button.violet:hover {
@@ -109,7 +110,7 @@ p.subtitle {
 }
 
 
-/* avadaBakery */
+/* HTML & BODY */
 
 html {
     scroll-behavior: smooth;
@@ -127,6 +128,9 @@ body {
     height: 100vh;
 }
 
+
+/* HEADER */
+
 header {
     width: 100%;
     height: 700px;
@@ -135,6 +139,15 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+header .titles {
+    height: 100%;
+    width: 550px;
+    padding: 220px 30px;
+}
+
+
+/* TOPBAR FIXED */
 
 nav {
     position: fixed;
@@ -176,7 +189,7 @@ nav {
 .menu li {
     position: relative;
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 50px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
@@ -210,10 +223,71 @@ nav {
     cursor: pointer;
 }
 
-header .titles {
-    height: 100%;
-    width: 550px;
-    padding: 220px 30px;
+
+/* FIXED BUTTONS */
+
+.fixed_buttons_demo {
+    position: fixed;
+    top: 200px;
+    right: 16px;
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+    text-align: center;
+    color: var(--limedSpruce);
+    border-radius: 6px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 30px 1px var(--manatee);
+}
+
+.fixed_buttons_price {
+    position: fixed;
+    top: 280px;
+    right: 16px;
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+    text-align: center;
+    color: var(--limedSpruce);
+    border-radius: 6px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 30px 1px var(--manatee);
+}
+
+p.fixed_buttons_pricing {
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--japaneseLaurel);
+}
+
+p.fixed_buttons_title {
+    font-family: 'Open Sans', serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.fixed_buttons_toTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: var(--outerSpace);
+    border-radius: 6px;
+}
+
+.fixed_buttons_toTop:hover {
+    cursor: pointer;
 }
 
 section {
