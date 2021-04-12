@@ -308,10 +308,16 @@ p.fixed_buttons_title {
     color: white;
     background-color: var(--outerSpace);
     border-radius: 6px;
+    opacity: 0;
+    transition: var(--main-trans);
 }
 
 .fixed_buttons_toTop:hover {
     cursor: pointer;
+}
+
+.toTop_scrollOverHeader {
+    opacity: 1;
 }
 
 section {
