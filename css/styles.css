@@ -397,6 +397,19 @@ footer {
     cursor: pointer;
 }
 
+p.cart_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    margin-left: 15px;
+    border-radius: 50%;
+    color: var(--daisyBush);
+    background-color: var(--perfume);
+}
+
 
 /* FOOTER RIGHT */
 
