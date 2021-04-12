@@ -1,0 +1,149 @@
+.debug * {
+    border: 1px solid black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    /* Color Cube */
+    --white: #fff;
+    --tobaccoBrown: #6a5243;
+    --codGray: #0e0e0d;
+    --manatee: #929295;
+    --atoll: #0a5e6c;
+    --chalky: #f0caa1;
+    --rawSienna: #d68843;
+    --perfume: #bda2f3;
+    --daisyBush: #5b2ca2;
+    --japaneseLaurel: #287a00;
+    /* Median Cut */
+    --outerSpace: #282d2c;
+    --pearlBush: #e9dedc;
+    --millBrook: #694a3a;
+    --leather: #9f7651;
+    --mamba: #878589;
+    /* Material Design */
+    --driftWood: #b77c49;
+    --sandrift: #b2927b;
+    --atoll_darkVibrant: #086875;
+    --limedSpruce: #344747;
+    --tan: #d6b28d;
+    /* Transition Timings */
+    --main-trans: 200ms ease-in-out;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#avadaBakery {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/bakery-header-bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 30px 0 20px;
+    color: var(--daisyBush);
+    background-color: transparent;
+    transition: var(--main-trans);
+}
+
+.nav_scrollOverHeader {
+    background-color: white;
+    box-shadow: 2px 0 10px var(--pearlBush);
+}
+
+.logo {
+    flex: 0 0 auto;
+    padding: 5px 0 10px;
+    height: inherit;
+}
+
+.logo img {
+    height: 90%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    height: inherit;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu li:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--daisyBush);
+    opacity: 0;
+    transition: var(--main-trans);
+}
+
+.menu li:hover:after {
+    opacity: 1;
+}
+
+.menu .fa-shopping-cart {
+    font-size: 16p;
+}
+
+.menu .fa-shopping-cart:hover {
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    height: 1000px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- GOOGLE FONTS OPEN SANS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEET CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Avada Bakery</title>
+</head>
+
+<body class="">
+
+    <div id="avadaBakery">
+        <!-- INIZIO HEADER -->
+        <header>
+            <!-- INIZIO TOPBAR FIXED -->
+            <nav>
+                <!-- LOGO -->
+                <div class="logo">
+                    <a href="#">
+                        <img :src="navBarLogo.src" :alt="navBarLogo.alt">
+                    </a>
+                </div>
+
+                <!-- MENU -->
+                <div class="menu">
+                    <ul>
+                        <li v-for="menuItem in navBarMenuObjects"><a :href="menuItem.link">{{menuItem.title}}</a></li>
+                    </ul>
+                    <i class="fas fa-shopping-cart"></i>
+
+                </div>
+
+            </nav>
+            <!-- FINE TOPBAR FIXED -->
+        </header>
+        <!-- FINE HEADER -->
+
+
+
+        <section></section>
+
+    </div>
+
+
+
+    <!-- SCRIPT MAIN.JS -->
+    <script src="js/main.js "></script>
+</body>
+
+</html>
