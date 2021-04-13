@@ -97,6 +97,14 @@ button.violet:hover {
     cursor: pointer;
 }
 
+.text_white {
+    color: white !important;
+}
+
+.margin_top_60 {
+    margin-top: 60px !important;
+}
+
 
 /* Typography */
 
@@ -320,9 +328,24 @@ p.fixed_buttons_title {
     opacity: 1;
 }
 
-section {
+
+/* SECTION WALL CARD */
+
+section.wall_card {
     width: 100%;
-    height: 1000px;
+    height: 500px;
+    background-image: url(../img/bakery-process-4.jpeg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.wall_card_titles {
+    width: 800px;
+    margin-left: 100px;
+    padding: 70px 0;
 }
 
 
