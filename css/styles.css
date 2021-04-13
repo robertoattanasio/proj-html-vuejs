@@ -97,7 +97,7 @@ button.violet {
     font-size: 12px;
     font-weight: 600;
     background-color: var(--daisyBush);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 6px;
     transition: var(--main-trans);
     outline: none;
@@ -451,9 +451,20 @@ p.fixed_buttons_title {
     right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: #000;
     transition: 200ms ease-in-out;
     z-index: 3;
+}
+
+.corporate_item:hover::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .corporate_item:hover img:first-child {
@@ -465,7 +476,7 @@ p.fixed_buttons_title {
 }
 
 .corporate_item:hover .corporate_item_info {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 
@@ -524,6 +535,63 @@ p.fixed_buttons_title {
 
 .locations_info_content div button {
     width: 60%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/* SECTION GET IN TOUCH */
+
+.getInTouch_row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.getInTouch_row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.getInTouch_col1 {
+    position: relative;
+    width: calc(100% / 4);
+    height: 100%;
+    padding-right: 20px;
+}
+
+.getInTouch_col1:last-child {
+    padding-right: 0;
+}
+
+.getInTouch_col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: calc(100% / 2);
+    height: 100%;
+    z-index: 999;
+}
+
+.getInTouch_col2 * {
+    z-index: 2;
+}
+
+.getInTouch_col2::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 20px;
+    bottom: 0px;
+    content: '';
+    background-color: #f7f1f3;
+    z-index: 1;
 }
 
 
