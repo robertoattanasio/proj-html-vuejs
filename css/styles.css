@@ -56,11 +56,18 @@ a:active {
     --main-trans: 200ms ease-in-out;
 }
 
+section {
+    width: 100%;
+}
+
 .main_wrapper {
     width: 88%;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 120px 0;
 }
+
+
+/* btn */
 
 button.white {
     font-family: 'Open Sans', serif;
@@ -102,6 +109,9 @@ button.violet:hover {
     border: 1px solid lightgray;
     cursor: pointer;
 }
+
+
+/* Modular Classes */
 
 .text_white {
     color: white !important;
@@ -228,6 +238,7 @@ nav {
     color: var(--daisyBush);
     background-color: transparent;
     transition: var(--main-trans);
+    z-index: 999;
 }
 
 .nav_scrollOverHeader {
@@ -365,11 +376,82 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION LOCATIONS */
+/* SECTION CORPORATE */
 
-section.locations {
+.corporate_container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
     width: 100%;
+    margin-top: 40px;
 }
+
+.corporate_item {
+    position: relative;
+    width: 50%;
+    min-width: 500px;
+    overflow: hidden;
+}
+
+.corporate_container .corporate_item:first-child {
+    margin-right: 10px;
+}
+
+.corporate_container .corporate_item:last-child {
+    margin-left: 10px;
+}
+
+.corporate_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 200ms ease-in-out;
+}
+
+.corporate_item img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.corporate_item img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.corporate_item_info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: #000;
+    transition: 200ms ease-in-out;
+    z-index: 3;
+}
+
+.corporate_item:hover img:first-child {
+    opacity: 0;
+}
+
+.corporate_item:hover img:last-child {
+    opacity: 1;
+}
+
+.corporate_item:hover .corporate_item_info {
+    opacity: 0.8;
+}
+
+
+/* SECTION LOCATIONS */
 
 .section_titles {
     display: flex;
