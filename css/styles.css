@@ -63,7 +63,7 @@ section {
 .main_wrapper {
     width: 88%;
     margin: 0 auto;
-    padding: 120px 0;
+    padding: 120px 0 60px;
 }
 
 
@@ -184,6 +184,22 @@ p.subtitle {
     color: var(--manatee);
     font: 12px;
     line-height: 30px;
+}
+
+blockquote {
+    margin: 30px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--daisyBush);
+}
+
+blockquote::before {
+    content: '"';
+}
+
+blockquote::after {
+    content: '"';
 }
 
 
@@ -333,6 +349,7 @@ nav {
     padding: 10px;
     background-color: white;
     box-shadow: 0 0 30px 1px var(--manatee);
+    z-index: 999;
 }
 
 p.fixed_buttons_pricing {
@@ -365,6 +382,7 @@ p.fixed_buttons_title {
     border-radius: 6px;
     opacity: 0;
     transition: var(--main-trans);
+    z-index: 999;
 }
 
 .fixed_buttons_toTop:hover {
@@ -462,7 +480,7 @@ p.fixed_buttons_title {
 
 .locations_cards {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     width: 100%;
     margin-top: 40px;
 }
@@ -509,9 +527,115 @@ p.fixed_buttons_title {
 }
 
 
+/* SECTION MID CARD */
+
+.mid_card {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: 20px 0;
+}
+
+.mid_card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.7) 90%);
+    z-index: 1;
+}
+
+.mid_card_colored {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 600px;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #f7f1f3;
+}
+
+.mid_card_row {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.mid_card_item {
+    width: 50%;
+}
+
+.mid_card_row .mid_card_item:first-child {
+    margin-right: 10px;
+}
+
+.mid_card_row .mid_card_item:last-child {
+    margin-left: 10px;
+}
+
+.mid_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mid_card_title {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 500px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+}
+
+.mid_card_number {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    font-family: 'Open Sans', serif;
+    font-size: 70px;
+    font-weight: 200;
+    color: white;
+    z-index: 2;
+}
+
+.mid_card_info_left {
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+    width: 450px;
+    z-index: 2;
+}
+
+.mid_card_info_left p {
+    margin-top: 26px;
+}
+
+.mid_card_info_right {
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    width: 450px;
+    z-index: 2;
+}
+
+.mid_card_info_right p {
+    margin-top: 26px;
+}
+
+
 /* SECTION WALL CARD */
 
-section.wall_card {
+#wall_card {
     background-image: url(../img/bakery-process-4.jpeg);
     background-position: top;
     background-repeat: no-repeat;
