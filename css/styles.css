@@ -55,6 +55,9 @@ a:active {
 /* 2.1 Default Elements */
 
 :root {
+    /* typography */
+    --elegant-font: 'Playfair Display', serif;
+    --modern-font: 'Open Sans', serif;
     /* Color Cube */
     --white: #fff;
     --tobaccoBrown: #6a5243;
@@ -142,6 +145,10 @@ button.violet:hover {
     color: white !important;
 }
 
+.text_violet {
+    color: var(--daisyBush) !important;
+}
+
 .text_align_center {
     text-align: center !important;
 }
@@ -175,7 +182,7 @@ button.violet:hover {
 /* 2.4 Typography */
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--elegant-font);
     font-size: 50px;
     font-weight: 700;
     color: var(--daisyBush);
@@ -183,21 +190,21 @@ h1 {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--elegant-font);
     font-size: 30px;
     font-weight: 700;
     color: var(--daisyBush);
 }
 
 h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-family: var(--elegant-font);
+    font-size: 16px;
     font-weight: 700;
     color: var(--daisyBush);
 }
 
 h4 {
-    font-family: 'Open Sans', serif;
+    font-family: var(--modern-font);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -206,7 +213,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Open Sans', serif;
+    font-family: var(--modern-font);
     font-size: 10px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -222,7 +229,7 @@ p.subtitle {
 
 blockquote {
     margin: 30px 0;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--elegant-font);
     font-size: 34px;
     font-weight: 700;
     color: var(--daisyBush);
@@ -246,7 +253,7 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--modern-font);
     overflow-y: scroll;
 }
 
@@ -388,7 +395,7 @@ nav {
 }
 
 p.fixed_buttons_pricing {
-    font-family: 'Open Sans', serif;
+    font-family: var(--modern-font);
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -396,7 +403,7 @@ p.fixed_buttons_pricing {
 }
 
 p.fixed_buttons_title {
-    font-family: 'Open Sans', serif;
+    font-family: var(--modern-font);
     font-size: 12px;
     font-weight: 600;
 }
@@ -431,37 +438,6 @@ p.fixed_buttons_title {
 
 
 /* 3.5 Section Products */
-
-.products_container_big {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    width: 100%;
-    height: 550px;
-}
-
-.products_container_small {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    width: 100%;
-    height: 400px;
-}
-
-.products_titles_small {
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    flex: 0 1 350px;
-    height: 100%;
-    padding: 30px;
-}
-
-.products_titles_big {
-    flex: 0 1 550px;
-    height: 100%;
-    padding: 30px;
-}
 
 .products_showreel_small,
 .products_showreel_big {
@@ -514,20 +490,27 @@ p.fixed_buttons_title {
     background-color: var(--daisyBush);
 }
 
-.products_showreel_small>.products_item_big {
-    position: relative;
-    width: 49%;
+
+/* PRODUCTS BIG */
+
+.products_container_big {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+}
+
+.products_titles_big {
+    flex: 0 1 550px;
     height: 100%;
+    padding: 30px;
 }
 
 .products_showreel_big>.products_item_big {
     position: relative;
-    width: calc(100% / 3);
+    width: 49%;
     height: 100%;
-}
-
-.products_item_big:hover {
-    cursor: pointer;
 }
 
 .products_item_big img {
@@ -536,7 +519,11 @@ p.fixed_buttons_title {
     object-fit: cover;
 }
 
-.products_item_info {
+.products_item_big:hover {
+    cursor: pointer;
+}
+
+.products_item_hover_info {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -551,11 +538,11 @@ p.fixed_buttons_title {
     transition: var(--long-trans);
 }
 
-.products_item_info * {
+.products_item_hover_info * {
     z-index: 2;
 }
 
-.products_item_big:hover .products_item_info {
+.products_item_big:hover .products_item_hover_info {
     opacity: 1;
 }
 
@@ -574,6 +561,95 @@ p.fixed_buttons_title {
 
 .products_item_big:hover::after {
     opacity: 0.6;
+}
+
+
+/* PRODUCTS SMALL */
+
+.products_container_small {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.products_titles_small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    flex: 0 1 350px;
+    height: 100%;
+    padding: 30px;
+}
+
+.products_showreel_small>.products_item_small {
+    position: relative;
+    width: 32%;
+    height: 100%;
+}
+
+.products_item_small {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.products_item_small:hover {
+    cursor: pointer;
+}
+
+.products_item_small img {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.products_item_small::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    z-index: 1;
+    transition: var(--main-trans);
+}
+
+.products_item_small:hover::after {
+    opacity: 0.6;
+}
+
+.products_item_hover_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    color: white;
+    z-index: 2;
+    transition: var(--main-trans);
+}
+
+.products_item_small:hover .products_item_hover_text {
+    opacity: 1;
+}
+
+.products_item_info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
 }
 
 
@@ -839,7 +915,7 @@ p.fixed_buttons_title {
     top: 70px;
     left: 50px;
     width: 500px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--elegant-font);
     font-size: 40px;
     font-weight: 700;
     color: white;
@@ -850,7 +926,7 @@ p.fixed_buttons_title {
     position: absolute;
     top: 50px;
     right: 50px;
-    font-family: 'Open Sans', serif;
+    font-family: var(--modern-font);
     font-size: 70px;
     font-weight: 200;
     color: white;
@@ -1007,7 +1083,7 @@ p.cart_item {
 }
 
 .email input {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--modern-font);
     font-size: 12px;
     font-weight: 600;
     color: var(--outerSpace);
