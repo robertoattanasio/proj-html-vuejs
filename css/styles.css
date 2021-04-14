@@ -88,7 +88,7 @@ section {
 }
 
 .main_wrapper {
-    width: 88%;
+    width: 85%;
     margin: 0 auto;
     padding: 120px 0 30px;
 }
@@ -271,7 +271,7 @@ header {
 .header_titles {
     height: 100%;
     width: 550px;
-    padding: 220px 30px;
+    padding: 220px 40px;
 }
 
 
