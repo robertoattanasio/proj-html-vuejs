@@ -1,11 +1,36 @@
-/* Debug */
+/* 
+avadaBakery
+Table of Content
+
+1.1 Debug
+    1.2 Init
+    
+2.1 Default Elements
+    2.2 Btn
+    2.3 Modular Classes
+    2.4 Typography
+
+3.1 HTML & BODY
+    3.2 Header
+    3.3 TopBar Fixed
+    3.4 Fixed Buttons
+    3.5 Section Corporate
+    3.6 Section Locations
+    3.7 Section Get In Touch / Social
+    3.8 Section Mid Card
+    3.9 Section Wall Card
+    3.10 Footer
+*/
+
+
+/* 1.1 Debug */
 
 .debug * {
     border: 1px solid black;
 }
 
 
-/* Init */
+/* 1.2 Init */
 
 * {
     margin: 0;
@@ -26,7 +51,7 @@ a:active {
 }
 
 
-/* Default Elements */
+/* 2.1 Default Elements */
 
 :root {
     /* Color Cube */
@@ -68,7 +93,7 @@ section {
 }
 
 
-/* btn */
+/* 2.2 Btn */
 
 button.white {
     font-family: 'Open Sans', serif;
@@ -112,7 +137,7 @@ button.violet:hover {
 }
 
 
-/* Modular Classes */
+/* 2.3 Modular Classes */
 
 .text_white {
     color: white !important;
@@ -139,7 +164,7 @@ button.violet:hover {
 }
 
 
-/* Typography */
+/* 2.4 Typography */
 
 h1 {
     font-family: 'Playfair Display', serif;
@@ -204,7 +229,7 @@ blockquote::after {
 }
 
 
-/* HTML & BODY */
+/* 3.1 HTML & BODY */
 
 html {
     scroll-behavior: smooth;
@@ -223,7 +248,7 @@ body {
 }
 
 
-/* HEADER */
+/* 3.2 Header */
 
 header {
     width: 100%;
@@ -241,7 +266,7 @@ header {
 }
 
 
-/* TOPBAR FIXED */
+/* 3.3 Topbar Fixed */
 
 nav {
     position: fixed;
@@ -319,7 +344,7 @@ nav {
 }
 
 
-/* FIXED BUTTONS */
+/* 3.4 Fixed Buttons */
 
 .fixed_buttons_demo {
     position: fixed;
@@ -395,7 +420,7 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION CORPORATE */
+/* 3.5 Section Corporate */
 
 .corporate_container {
     display: flex;
@@ -481,7 +506,7 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION LOCATIONS */
+/* 3.6 Section Locations */
 
 .section_titles {
     display: flex;
@@ -553,7 +578,7 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION GET IN TOUCH */
+/* 3.7 Section Get In Touch / Social */
 
 .getInTouch_row {
     display: flex;
@@ -614,7 +639,7 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION MID CARD */
+/* 3.8 Section Mid Card */
 
 .mid_card {
     position: relative;
@@ -720,7 +745,7 @@ p.fixed_buttons_title {
 }
 
 
-/* SECTION WALL CARD */
+/* 3.9 Section Wall Card */
 
 #wall_card {
     background-image: url(../img/bakery-process-4.jpeg);
@@ -740,7 +765,7 @@ p.fixed_buttons_title {
 }
 
 
-/* FOOTER */
+/* 3.10 Footer */
 
 footer {
     width: 100%;
@@ -748,7 +773,7 @@ footer {
 }
 
 
-/* FOOTER TOP */
+/* Footer Top */
 
 .top_footer {
     display: flex;
@@ -758,7 +783,7 @@ footer {
 }
 
 
-/* FOOTER LEFT */
+/* Footer Top Left */
 
 .footer_left {
     width: 70%;
@@ -831,7 +856,7 @@ p.cart_item {
 }
 
 
-/* FOOTER RIGHT */
+/* Footer Top Right */
 
 .footer_right {
     width: 30%;
@@ -857,7 +882,7 @@ p.cart_item {
 }
 
 
-/* FOOTER BOTTOM */
+/* Footer Bottom */
 
 .bottom_footer {
     display: flex;
