@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- VUE JS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
 
     <!-- FONT AWESOME -->
@@ -47,6 +48,9 @@
                         <li v-for="menuItem in navBarMenuObjects"><a :href="menuItem.link">{{menuItem.title}}</a></li>
                     </ul>
                     <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="menu_mobile">
+                    <i class="fas fa-bars"></i>
                 </div>
             </nav>
             <!-- FINE TOPBAR FIXED -->
@@ -463,7 +467,7 @@
         <!-- FINE SEZIONE WALL CARD -->
 
         <!-- INIZIO FOOTER -->
-        <footer>
+        <footer class="main_wrapper">
             <!-- TOP FOOTER -->
             <div class="top_footer">
 
